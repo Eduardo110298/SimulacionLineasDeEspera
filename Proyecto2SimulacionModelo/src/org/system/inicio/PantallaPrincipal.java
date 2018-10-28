@@ -80,6 +80,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         t_1 = new javax.swing.JLabel();
         continuar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Simulación y Modelos");
@@ -207,10 +208,15 @@ public class PantallaPrincipal extends javax.swing.JFrame {
                 continuarActionPerformed(evt);
             }
         });
-        jPanel1.add(continuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 610, 140, 30));
+        jPanel1.add(continuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 610, 140, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/icons/iconos/logopeqcorp.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 120, 310, 60));
+
+        jLabel2.setFont(new java.awt.Font("Dialog", 0, 11)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel2.setText("2018 © Todos los derechos reservados - Luna,Rodríguez,Natera.");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 650, -1, -1));
 
         getContentPane().add(jPanel1);
 
@@ -277,6 +283,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     public static javax.swing.JLabel fecha;
     public static javax.swing.JLabel hora;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private static javax.swing.JLabel menu_inicio;
