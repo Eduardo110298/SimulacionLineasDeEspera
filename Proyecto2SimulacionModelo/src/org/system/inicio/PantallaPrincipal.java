@@ -99,7 +99,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
         menu_inicio.setFont(new java.awt.Font("Corbel", 1, 24)); // NOI18N
         menu_inicio.setForeground(new java.awt.Color(153, 153, 153));
-        menu_inicio.setText("Sistemas de Lineas de Espera");
+        menu_inicio.setText("Sistema de Lineas de Espera");
         jPanel1.add(menu_inicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 30, 400, 72));
 
         hora.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
