@@ -218,11 +218,12 @@ public class FormularioEntrada extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Datos de entrada");
+        setBackground(new java.awt.Color(209, 233, 239));
         setExtendedState(MAXIMIZED_BOTH);
         setMinimumSize(new java.awt.Dimension(1110, 700));
         getContentPane().setLayout(new java.awt.FlowLayout());
 
-        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(209, 233, 239));
         jPanel1.setMinimumSize(new java.awt.Dimension(1180, 680));
         jPanel1.setPreferredSize(new java.awt.Dimension(1180, 680));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());

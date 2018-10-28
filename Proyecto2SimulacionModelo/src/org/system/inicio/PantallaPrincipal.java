@@ -83,8 +83,8 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Simulación y Modelos");
-        setBackground(new java.awt.Color(255, 255, 255));
+        setTitle("Sistema de lineas de espera - CORPOELEC");
+        setBackground(new java.awt.Color(209, 233, 239));
         setExtendedState(MAXIMIZED_BOTH);
         setFocusable(false);
         setMinimumSize(new java.awt.Dimension(1110, 700));
