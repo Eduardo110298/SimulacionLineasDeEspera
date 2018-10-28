@@ -79,35 +79,39 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         TablaDatos = new javax.swing.JTable();
         t_1 = new javax.swing.JLabel();
         continuar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Simulación y Modelos");
+        setBackground(new java.awt.Color(255, 255, 255));
         setExtendedState(MAXIMIZED_BOTH);
+        setFocusable(false);
         setMinimumSize(new java.awt.Dimension(1110, 700));
         java.awt.FlowLayout flowLayout1 = new java.awt.FlowLayout();
         flowLayout1.setAlignOnBaseline(true);
         getContentPane().setLayout(flowLayout1);
 
-        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(209, 233, 239));
         jPanel1.setMinimumSize(new java.awt.Dimension(1180, 680));
         jPanel1.setPreferredSize(new java.awt.Dimension(1180, 680));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        menu_inicio.setFont(new java.awt.Font("Cambria", 1, 48)); // NOI18N
-        menu_inicio.setForeground(new java.awt.Color(84, 19, 1));
-        menu_inicio.setText("SIMULACIÓN Y MODELOS");
-        jPanel1.add(menu_inicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 100, 570, 72));
+        menu_inicio.setFont(new java.awt.Font("Corbel", 1, 24)); // NOI18N
+        menu_inicio.setForeground(new java.awt.Color(153, 153, 153));
+        menu_inicio.setText("Sistemas de Lineas de Espera");
+        jPanel1.add(menu_inicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 30, 400, 72));
 
         hora.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
-        hora.setForeground(new java.awt.Color(84, 19, 1));
+        hora.setForeground(new java.awt.Color(209, 233, 239));
         hora.setText("Hora:");
         jPanel1.add(hora, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 40, 188, 35));
 
         fecha.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
-        fecha.setForeground(new java.awt.Color(84, 19, 1));
+        fecha.setForeground(new java.awt.Color(209, 233, 239));
         fecha.setText("Fecha:");
         jPanel1.add(fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 80, 188, 34));
 
+        TablaDatos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         TablaDatos.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         TablaDatos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -176,6 +180,9 @@ public class PantallaPrincipal extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        TablaDatos.setFocusable(false);
+        TablaDatos.setGridColor(new java.awt.Color(153, 153, 153));
+        TablaDatos.setRowSelectionAllowed(false);
         TablaDatos.setSelectionBackground(new java.awt.Color(50, 72, 135));
         jScrollPane1.setViewportView(TablaDatos);
         if (TablaDatos.getColumnModel().getColumnCount() > 0) {
@@ -183,25 +190,27 @@ public class PantallaPrincipal extends javax.swing.JFrame {
             TablaDatos.getColumnModel().getColumn(1).setResizable(false);
         }
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 240, 560, 320));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, 710, 350));
 
-        t_1.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
-        t_1.setForeground(new java.awt.Color(84, 19, 1));
-        t_1.setText("Tabla. Parque Costazul-Mc. Café");
-        jPanel1.add(t_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 190, 280, 35));
+        t_1.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
+        t_1.setForeground(new java.awt.Color(102, 102, 102));
+        t_1.setText("Tabla de datos. C.C La Vela- CORPOELEC");
+        jPanel1.add(t_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, 370, 35));
 
-        continuar.setBackground(new java.awt.Color(255, 255, 255));
-        continuar.setFont(new java.awt.Font("Cambria", 3, 18)); // NOI18N
-        continuar.setForeground(new java.awt.Color(84, 19, 1));
-        continuar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/icons/iconos/continuar.png"))); // NOI18N
-        continuar.setText("Continuar");
+        continuar.setBackground(new java.awt.Color(26, 42, 84));
+        continuar.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
+        continuar.setForeground(new java.awt.Color(255, 255, 255));
+        continuar.setText("Iniciar");
         continuar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         continuar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 continuarActionPerformed(evt);
             }
         });
-        jPanel1.add(continuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 590, 170, 60));
+        jPanel1.add(continuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 610, 140, 30));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/icons/iconos/logopeqcorp.png"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 120, 310, 60));
 
         getContentPane().add(jPanel1);
 
@@ -267,6 +276,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     public static javax.swing.JButton continuar;
     public static javax.swing.JLabel fecha;
     public static javax.swing.JLabel hora;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private static javax.swing.JLabel menu_inicio;
