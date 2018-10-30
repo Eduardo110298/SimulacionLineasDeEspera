@@ -198,7 +198,6 @@ public class FormularioEntrada extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        Titulo = new javax.swing.JLabel();
         hora = new javax.swing.JLabel();
         fecha = new javax.swing.JLabel();
         fondo_pantalla = new javax.swing.JPanel();
@@ -213,6 +212,8 @@ public class FormularioEntrada extends javax.swing.JFrame {
         Tiempos = new javax.swing.JCheckBox();
         TiempoProximaLlegada = new javax.swing.JCheckBox();
         TPL = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        Titulo = new javax.swing.JLabel();
         volver = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
@@ -227,11 +228,6 @@ public class FormularioEntrada extends javax.swing.JFrame {
         jPanel1.setMinimumSize(new java.awt.Dimension(1180, 680));
         jPanel1.setPreferredSize(new java.awt.Dimension(1180, 680));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        Titulo.setFont(new java.awt.Font("Corbel", 1, 24)); // NOI18N
-        Titulo.setForeground(new java.awt.Color(102, 102, 102));
-        Titulo.setText("CONDICIONES INICIALES");
-        jPanel1.add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 80, 280, 70));
 
         hora.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
         hora.setForeground(new java.awt.Color(209, 233, 239));
@@ -251,8 +247,9 @@ public class FormularioEntrada extends javax.swing.JFrame {
         fondo_pantalla.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         condicion_parada.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
-        condicion_parada.setText("<html> <body> Condición de <br> parada</body> </html>");
-        fondo_pantalla.add(condicion_parada, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 120, -1));
+        condicion_parada.setForeground(new java.awt.Color(102, 102, 102));
+        condicion_parada.setText("<html> <body> Condición de parada</body> </html>");
+        fondo_pantalla.add(condicion_parada, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 160, 40));
 
         CondicionParada.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         CondicionParada.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -260,23 +257,23 @@ public class FormularioEntrada extends javax.swing.JFrame {
                 CondicionParadaKeyTyped(evt);
             }
         });
-        fondo_pantalla.add(CondicionParada, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 100, 80, 30));
+        fondo_pantalla.add(CondicionParada, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 140, 80, 30));
 
-        aceptar.setBackground(new java.awt.Color(255, 255, 255));
-        aceptar.setFont(new java.awt.Font("Cambria", 3, 18)); // NOI18N
-        aceptar.setForeground(new java.awt.Color(84, 19, 1));
-        aceptar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/icons/iconos/bloggif_58743a5b078d5.png"))); // NOI18N
+        aceptar.setBackground(javax.swing.UIManager.getDefaults().getColor("InternalFrame.activeTitleGradient"));
+        aceptar.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
+        aceptar.setForeground(new java.awt.Color(51, 51, 51));
         aceptar.setText("Aceptar");
         aceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 aceptarActionPerformed(evt);
             }
         });
-        fondo_pantalla.add(aceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 380, -1, 50));
+        fondo_pantalla.add(aceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 360, 110, 30));
 
         numero_entidades.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
-        numero_entidades.setText("<html> <body> Número de <br> Entidades </body> </html>");
-        fondo_pantalla.add(numero_entidades, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 120, 50));
+        numero_entidades.setForeground(new java.awt.Color(102, 102, 102));
+        numero_entidades.setText("<html> <body> Número de Entidades </body> </html>");
+        fondo_pantalla.add(numero_entidades, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 130, 170, 50));
 
         NumeroEntidades.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         NumeroEntidades.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -287,7 +284,7 @@ public class FormularioEntrada extends javax.swing.JFrame {
                 NumeroEntidadesKeyTyped(evt);
             }
         });
-        fondo_pantalla.add(NumeroEntidades, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 150, 250, 35));
+        fondo_pantalla.add(NumeroEntidades, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 140, 80, 30));
 
         TPS.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         TPS.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -295,49 +292,50 @@ public class FormularioEntrada extends javax.swing.JFrame {
                 TPSKeyTyped(evt);
             }
         });
-        fondo_pantalla.add(TPS, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 310, 80, 30));
+        fondo_pantalla.add(TPS, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 260, 80, 30));
 
         TipoParada.setFont(new java.awt.Font("Corbel", 0, 14)); // NOI18N
+        TipoParada.setForeground(new java.awt.Color(102, 102, 102));
         TipoParada.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Tiempo de Simulación (minutos)", "Nro. de Clientes que llegan al Sistema", "Nro. de Entidades servidas" }));
         TipoParada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TipoParadaActionPerformed(evt);
             }
         });
-        fondo_pantalla.add(TipoParada, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 100, 250, 30));
+        fondo_pantalla.add(TipoParada, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 140, 250, 30));
 
-        TiempoProximoServicio.setBackground(new java.awt.Color(225, 242, 225));
-        TiempoProximoServicio.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
-        TiempoProximoServicio.setForeground(new java.awt.Color(84, 19, 1));
-        TiempoProximoServicio.setText("Tiempo del próximo servicio (minutos)");
+        TiempoProximoServicio.setBackground(new java.awt.Color(255, 255, 255));
+        TiempoProximoServicio.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
+        TiempoProximoServicio.setForeground(new java.awt.Color(102, 102, 102));
+        TiempoProximoServicio.setText("Tiempo del próximo servicio (segundos)");
         TiempoProximoServicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TiempoProximoServicioActionPerformed(evt);
             }
         });
-        fondo_pantalla.add(TiempoProximoServicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, -1, -1));
+        fondo_pantalla.add(TiempoProximoServicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, -1, -1));
 
-        Tiempos.setBackground(new java.awt.Color(225, 242, 225));
-        Tiempos.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
-        Tiempos.setForeground(new java.awt.Color(84, 19, 1));
+        Tiempos.setBackground(new java.awt.Color(255, 255, 255));
+        Tiempos.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
+        Tiempos.setForeground(new java.awt.Color(102, 102, 102));
         Tiempos.setText("Tiempos del próximo evento");
         Tiempos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TiemposActionPerformed(evt);
             }
         });
-        fondo_pantalla.add(Tiempos, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, -1, -1));
+        fondo_pantalla.add(Tiempos, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, -1, -1));
 
-        TiempoProximaLlegada.setBackground(new java.awt.Color(225, 242, 225));
-        TiempoProximaLlegada.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
-        TiempoProximaLlegada.setForeground(new java.awt.Color(84, 19, 1));
-        TiempoProximaLlegada.setText("Tiempo de la próxima llegada (minutos)");
+        TiempoProximaLlegada.setBackground(new java.awt.Color(255, 255, 255));
+        TiempoProximaLlegada.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
+        TiempoProximaLlegada.setForeground(new java.awt.Color(102, 102, 102));
+        TiempoProximaLlegada.setText("Tiempo de la próxima llegada (segundos)");
         TiempoProximaLlegada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TiempoProximaLlegadaActionPerformed(evt);
             }
         });
-        fondo_pantalla.add(TiempoProximaLlegada, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 370, -1));
+        fondo_pantalla.add(TiempoProximaLlegada, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 200, 370, -1));
 
         TPL.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         TPL.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -345,9 +343,17 @@ public class FormularioEntrada extends javax.swing.JFrame {
                 TPLKeyTyped(evt);
             }
         });
-        fondo_pantalla.add(TPL, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 260, 80, 30));
+        fondo_pantalla.add(TPL, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 200, 80, 30));
 
-        jPanel1.add(fondo_pantalla, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 960, 460));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/icons/iconos/lightbulb (2).png"))); // NOI18N
+        fondo_pantalla.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, -1, -1));
+
+        Titulo.setFont(new java.awt.Font("Corbel", 1, 24)); // NOI18N
+        Titulo.setForeground(new java.awt.Color(102, 102, 102));
+        Titulo.setText("CONDICIONES INICIALES");
+        fondo_pantalla.add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 30, 280, 70));
+
+        jPanel1.add(fondo_pantalla, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 1010, 460));
 
         volver.setBackground(new java.awt.Color(26, 42, 84));
         volver.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
@@ -359,7 +365,7 @@ public class FormularioEntrada extends javax.swing.JFrame {
                 volverActionPerformed(evt);
             }
         });
-        jPanel1.add(volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 620, 140, 40));
+        jPanel1.add(volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 630, 140, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/icons/iconos/logopeqcorp.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, 310, 70));
@@ -653,6 +659,7 @@ public class FormularioEntrada extends javax.swing.JFrame {
     public static javax.swing.JPanel fondo_pantalla;
     public static javax.swing.JLabel hora;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     public static javax.swing.JLabel numero_entidades;
     public static javax.swing.JButton volver;

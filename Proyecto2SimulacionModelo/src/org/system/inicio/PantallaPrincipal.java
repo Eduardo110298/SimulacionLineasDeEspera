@@ -9,14 +9,8 @@ import java.awt.Color;
 import java.awt.Toolkit;
 import org.timer.temporizador.SystemTimer;
 
-/*
-                             SIMULACIÓN Y MODELOS
-                                 
-    Autores:                                        Sección:
-    1. Laura Lárez. CI: 24108504.                   0520.
-    2. Diego Castellano. CI: 24885991.
-    3. Efraín Rodríguez. CI: 25108834.              Profesora:
-    4. Rafael Di Gregorio. CI: 25235931.            Rodríguez Atencio Madeline Luz.
+/*                    
+   
  */
 
 /*
@@ -93,14 +87,15 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(flowLayout1);
 
         jPanel1.setBackground(new java.awt.Color(209, 233, 239));
+        jPanel1.setFocusable(false);
         jPanel1.setMinimumSize(new java.awt.Dimension(1180, 680));
         jPanel1.setPreferredSize(new java.awt.Dimension(1180, 680));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         menu_inicio.setFont(new java.awt.Font("Corbel", 1, 24)); // NOI18N
-        menu_inicio.setForeground(new java.awt.Color(153, 153, 153));
+        menu_inicio.setForeground(new java.awt.Color(102, 102, 102));
         menu_inicio.setText("Sistema de Lineas de Espera");
-        jPanel1.add(menu_inicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 30, 400, 72));
+        jPanel1.add(menu_inicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 30, 400, 72));
 
         hora.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
         hora.setForeground(new java.awt.Color(209, 233, 239));
@@ -114,6 +109,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
         TablaDatos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         TablaDatos.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        TablaDatos.setForeground(new java.awt.Color(102, 102, 102));
         TablaDatos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"                               11,67", "                               2,75"},
