@@ -170,7 +170,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
                 {"                                1,87", null}
             },
             new String [] {
-                "              Tiempo entre llegada (minutos)", "              Tiempo de servicio (minutos)"
+                "              Tiempo entre llegada (segundos)", "              Tiempo de servicio (segundos)"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -196,7 +196,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         t_1.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         t_1.setForeground(new java.awt.Color(102, 102, 102));
         t_1.setText("Tabla de datos. C.C La Vela- CORPOELEC");
-        jPanel1.add(t_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, 370, 35));
+        jPanel1.add(t_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 200, 370, 35));
 
         continuar.setBackground(new java.awt.Color(26, 42, 84));
         continuar.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
@@ -208,7 +208,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
                 continuarActionPerformed(evt);
             }
         });
-        jPanel1.add(continuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 610, 140, 30));
+        jPanel1.add(continuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 610, 140, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/icons/iconos/logopeqcorp.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 120, 310, 60));
