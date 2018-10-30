@@ -187,7 +187,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
             TablaDatos.getColumnModel().getColumn(1).setResizable(false);
         }
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, 710, 350));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, 660, 350));
 
         t_1.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         t_1.setForeground(new java.awt.Color(102, 102, 102));
@@ -198,7 +198,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         continuar.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
         continuar.setForeground(new java.awt.Color(255, 255, 255));
         continuar.setText("Iniciar");
-        continuar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        continuar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         continuar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 continuarActionPerformed(evt);

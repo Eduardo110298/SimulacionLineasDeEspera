@@ -263,6 +263,7 @@ public class FormularioEntrada extends javax.swing.JFrame {
         aceptar.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
         aceptar.setForeground(new java.awt.Color(51, 51, 51));
         aceptar.setText("Aceptar");
+        aceptar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         aceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 aceptarActionPerformed(evt);
@@ -297,6 +298,7 @@ public class FormularioEntrada extends javax.swing.JFrame {
         TipoParada.setFont(new java.awt.Font("Corbel", 0, 14)); // NOI18N
         TipoParada.setForeground(new java.awt.Color(102, 102, 102));
         TipoParada.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Tiempo de Simulación (minutos)", "Nro. de Clientes que llegan al Sistema", "Nro. de Entidades servidas" }));
+        TipoParada.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         TipoParada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TipoParadaActionPerformed(evt);
@@ -308,6 +310,7 @@ public class FormularioEntrada extends javax.swing.JFrame {
         TiempoProximoServicio.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
         TiempoProximoServicio.setForeground(new java.awt.Color(102, 102, 102));
         TiempoProximoServicio.setText("Tiempo del próximo servicio (segundos)");
+        TiempoProximoServicio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         TiempoProximoServicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TiempoProximoServicioActionPerformed(evt);
@@ -319,6 +322,7 @@ public class FormularioEntrada extends javax.swing.JFrame {
         Tiempos.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
         Tiempos.setForeground(new java.awt.Color(102, 102, 102));
         Tiempos.setText("Tiempos del próximo evento");
+        Tiempos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Tiempos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TiemposActionPerformed(evt);
@@ -330,6 +334,7 @@ public class FormularioEntrada extends javax.swing.JFrame {
         TiempoProximaLlegada.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
         TiempoProximaLlegada.setForeground(new java.awt.Color(102, 102, 102));
         TiempoProximaLlegada.setText("Tiempo de la próxima llegada (segundos)");
+        TiempoProximaLlegada.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         TiempoProximaLlegada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TiempoProximaLlegadaActionPerformed(evt);
@@ -346,7 +351,7 @@ public class FormularioEntrada extends javax.swing.JFrame {
         fondo_pantalla.add(TPL, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 200, 80, 30));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/icons/iconos/lightbulb (2).png"))); // NOI18N
-        fondo_pantalla.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, -1, -1));
+        fondo_pantalla.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 270, -1, -1));
 
         Titulo.setFont(new java.awt.Font("Corbel", 1, 24)); // NOI18N
         Titulo.setForeground(new java.awt.Color(102, 102, 102));
