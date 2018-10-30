@@ -1219,6 +1219,7 @@ public class TablaResultados extends javax.swing.JFrame {
         PatronesServicio = new javax.swing.JList();
         jScrollPane5 = new javax.swing.JScrollPane();
         PatronesLlegada = new javax.swing.JList();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Resultados obtenidos");
@@ -1236,7 +1237,7 @@ public class TablaResultados extends javax.swing.JFrame {
         menu_inicio.setFont(new java.awt.Font("Corbel", 1, 24)); // NOI18N
         menu_inicio.setForeground(new java.awt.Color(102, 102, 102));
         menu_inicio.setText("RESULTADOS FINALES");
-        jPanel1.add(menu_inicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 30, 270, 50));
+        jPanel1.add(menu_inicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 60, 270, 40));
 
         hora.setFont(new java.awt.Font("Cambria", 1, 14)); // NOI18N
         hora.setForeground(new java.awt.Color(209, 233, 239));
@@ -1315,9 +1316,9 @@ public class TablaResultados extends javax.swing.JFrame {
         });
         jPanel1.add(PatronServicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 180, 50));
 
-        volver.setBackground(new java.awt.Color(255, 255, 255));
+        volver.setBackground(new java.awt.Color(26, 42, 84));
         volver.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
-        volver.setForeground(new java.awt.Color(102, 102, 102));
+        volver.setForeground(new java.awt.Color(255, 255, 255));
         volver.setText("Volver");
         volver.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         volver.addActionListener(new java.awt.event.ActionListener() {
@@ -1372,6 +1373,9 @@ public class TablaResultados extends javax.swing.JFrame {
         jScrollPane5.setViewportView(PatronesLlegada);
 
         jPanel1.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 480, 380, 170));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/icons/iconos/logopeqcorp2.png"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
 
         getContentPane().add(jPanel1);
 
@@ -1532,6 +1536,7 @@ public class TablaResultados extends javax.swing.JFrame {
     public static javax.swing.JTable TablaResultadosFinales;
     public static javax.swing.JLabel fecha;
     public static javax.swing.JLabel hora;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane4;

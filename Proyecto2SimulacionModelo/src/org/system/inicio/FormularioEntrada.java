@@ -212,7 +212,6 @@ public class FormularioEntrada extends javax.swing.JFrame {
         Tiempos = new javax.swing.JCheckBox();
         TiempoProximaLlegada = new javax.swing.JCheckBox();
         TPL = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
         Titulo = new javax.swing.JLabel();
         volver = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -350,9 +349,6 @@ public class FormularioEntrada extends javax.swing.JFrame {
         });
         fondo_pantalla.add(TPL, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 200, 80, 30));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/icons/iconos/lightbulb (2).png"))); // NOI18N
-        fondo_pantalla.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 270, -1, -1));
-
         Titulo.setFont(new java.awt.Font("Corbel", 1, 24)); // NOI18N
         Titulo.setForeground(new java.awt.Color(102, 102, 102));
         Titulo.setText("CONDICIONES INICIALES");
@@ -373,7 +369,7 @@ public class FormularioEntrada extends javax.swing.JFrame {
         jPanel1.add(volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 630, 140, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/icons/iconos/logopeqcorp.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, 310, 70));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 30, 310, 70));
 
         getContentPane().add(jPanel1);
 
@@ -664,7 +660,6 @@ public class FormularioEntrada extends javax.swing.JFrame {
     public static javax.swing.JPanel fondo_pantalla;
     public static javax.swing.JLabel hora;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     public static javax.swing.JLabel numero_entidades;
     public static javax.swing.JButton volver;
