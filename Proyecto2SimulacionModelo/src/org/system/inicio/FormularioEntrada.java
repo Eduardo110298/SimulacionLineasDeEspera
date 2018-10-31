@@ -238,7 +238,7 @@ public class FormularioEntrada extends javax.swing.JFrame {
         fecha.setText("Fecha:");
         jPanel1.add(fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 80, 188, 34));
 
-        fondo_pantalla.setBackground(new java.awt.Color(255, 255, 255));
+        fondo_pantalla.setBackground(new java.awt.Color(209, 233, 239));
         fondo_pantalla.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos de entrada", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Corbel", 0, 18), new java.awt.Color(102, 102, 102))); // NOI18N
         fondo_pantalla.setForeground(new java.awt.Color(102, 102, 102));
         fondo_pantalla.setMinimumSize(new java.awt.Dimension(1180, 680));
@@ -262,7 +262,7 @@ public class FormularioEntrada extends javax.swing.JFrame {
         aceptar.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
         aceptar.setForeground(new java.awt.Color(51, 51, 51));
         aceptar.setText("Aceptar");
-        aceptar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        aceptar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         aceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 aceptarActionPerformed(evt);
@@ -297,7 +297,7 @@ public class FormularioEntrada extends javax.swing.JFrame {
         TipoParada.setFont(new java.awt.Font("Corbel", 0, 14)); // NOI18N
         TipoParada.setForeground(new java.awt.Color(102, 102, 102));
         TipoParada.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Tiempo de Simulación (minutos)", "Nro. de Clientes que llegan al Sistema", "Nro. de Entidades servidas" }));
-        TipoParada.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        TipoParada.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         TipoParada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TipoParadaActionPerformed(evt);
@@ -308,8 +308,8 @@ public class FormularioEntrada extends javax.swing.JFrame {
         TiempoProximoServicio.setBackground(new java.awt.Color(255, 255, 255));
         TiempoProximoServicio.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
         TiempoProximoServicio.setForeground(new java.awt.Color(102, 102, 102));
-        TiempoProximoServicio.setText("Tiempo del próximo servicio (segundos)");
-        TiempoProximoServicio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        TiempoProximoServicio.setText("Tiempo del próximo servicio (minutos)");
+        TiempoProximoServicio.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         TiempoProximoServicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TiempoProximoServicioActionPerformed(evt);
@@ -321,7 +321,7 @@ public class FormularioEntrada extends javax.swing.JFrame {
         Tiempos.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
         Tiempos.setForeground(new java.awt.Color(102, 102, 102));
         Tiempos.setText("Tiempos del próximo evento");
-        Tiempos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Tiempos.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Tiempos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TiemposActionPerformed(evt);
@@ -332,8 +332,8 @@ public class FormularioEntrada extends javax.swing.JFrame {
         TiempoProximaLlegada.setBackground(new java.awt.Color(255, 255, 255));
         TiempoProximaLlegada.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
         TiempoProximaLlegada.setForeground(new java.awt.Color(102, 102, 102));
-        TiempoProximaLlegada.setText("Tiempo de la próxima llegada (segundos)");
-        TiempoProximaLlegada.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        TiempoProximaLlegada.setText("Tiempo de la próxima llegada (minutos)");
+        TiempoProximaLlegada.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         TiempoProximaLlegada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TiempoProximaLlegadaActionPerformed(evt);

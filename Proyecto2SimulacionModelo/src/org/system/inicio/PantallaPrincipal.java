@@ -22,7 +22,13 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     
     //Atributo de la clase
     private SystemTimer systemTimer = null;
-    
+    public static final int cantidadDeCorridas = 0;
+    public static final double tiempoPromedioLlegadaSIMULACION = 0;
+    public static final double tiempoPromedioServicioSIMULACION = 0;
+    public static final double tiempoOcioServidorSIMULACION = 0;
+    public static final double tiempoUtilizacionServidorSIMULACION = 0;
+    public static final double tiempoPromedioEsperaColaSIMULACION = 0;
+    public static final double tiempoPromedioEsperaSistemaSIMULACION = 0;
     /*
      Método constructor de la clase
      */
@@ -128,55 +134,37 @@ public class PantallaPrincipal extends javax.swing.JFrame {
                 {"                                1,00", "                               2,05"},
                 {"                                3,70", "                               2,60"},
                 {"                               11,02", "                               3,32"},
-                {"                                3,77", "                               2,42"},
-                {"                                9,12", "                               3,37"},
-                {"                                1,13", "                               4,80"},
-                {"                                2,58", "                               2,27"},
-                {"                                5,02", "                               4,35"},
-                {"                                0,82", "                               3,48"},
-                {"                                1,10", "                               4,58"},
-                {"                                1,27", "                               2,20"},
-                {"                                2,95", "                               3,25"},
-                {"                                6,35", "                               3,00"},
-                {"                                3,53", "                               2,38"},
-                {"                                0,67", "                               4,52"},
-                {"                                3,05", "                               6,85"},
-                {"                                1,37", "                               7,82"},
-                {"                                3,42", "                               3,10"},
-                {"                                0,15", "                               7,63"},
-                {"                                2,13", "                               8,02"},
-                {"                                7,47", "                              10,13"},
-                {"                                0,87", "                               9,08"},
-                {"                                0,87", "                               3,67"},
-                {"                                3,10", "                               1,00"},
-                {"                                9,50", "                               1,38"},
-                {"                                3,35", "                               3,38"},
-                {"                                4,93", "                               4,38"},
-                {"                                3,52", "                               1,65"},
-                {"                                1,03", "                               1,10"},
-                {"                                2,97", null},
-                {"                                6,57", null},
-                {"                                6,88", null},
-                {"                                5,35", null},
-                {"                               22,03", null},
-                {"                                0,58", null},
-                {"                               12,12", null},
-                {"                                0,97", null},
-                {"                                7,37", null},
-                {"                                1,87", null}
+                {"                               9,12", "                               2,42"},
+                {"                               1,13", "                               3,37"},
+                {"                               2,58", "                               4,80"},
+                {"                               5,02", "                               2,27"},
+                {"                              0,82", "                               4,35"},
+                {"                               1,10", "                               3,48"},
+                {"                              1,27", "                               4,58"},
+                {"                               2,95", "                               2,20"},
+                {"                                6,35", "                               3,25"},
+                {"                                3,53", "                               3,00"},
+                {"                                3,05", "                               2,38"},
+                {"                                1,37", "                               4,52"},
+                {"                                3,42", "                               6,85"},
+                {"                                2,13", "                               7,82"},
+                {"                                7,47", "                               3,10"},
+                {"                                0,87", "                               7,63"},
+                {"                                0,87", "                               8,02"},
+                {"                                3,10", "                              10,13"},
+                {"                                6,57", "                               9,08"},
+                {"                                5,35", "                               3,67"},
+                {"                                22,03", "                               1,00"},
+                {"                                0,58", "                               1,38"},
+                {"                                12,12", "                               3,38"},
+                {"                                0,97", "                               4,38"},
+                {"                                7,37", "                               1,65"},
+                {"                                1,87", "                               1,10"}
             },
             new String [] {
-                "              Tiempo entre llegada (segundos)", "              Tiempo de servicio (segundos)"
+                "              Tiempo entre llegada (minutos)", "              Tiempo de servicio (minutos)"
             }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
+        ));
         TablaDatos.setFocusable(false);
         TablaDatos.setGridColor(new java.awt.Color(153, 153, 153));
         TablaDatos.setRowSelectionAllowed(false);

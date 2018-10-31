@@ -12,9 +12,9 @@ public class ConstantesGlobales {
     
     //Constantes globales del Sistema
     
-    public static final double _Patron_Llegada_Gamma = 0.147098;
-    public static final double _Patron_Llegada_Beta = 4.49552;
-    public static final double _Patron_Llegada_Alpha = 1.03137;
+    public static final double _Patron_Llegada_Gamma = 0.45;
+    public static final double _Patron_Llegada_Beta = 4.04599;
+    public static final double _Patron_Llegada_Alpha = 0.866087;
     
     public static final double _Patron_Servicio_Gamma = 0.46508;
     public static final double _Patron_Servicio_Beta = 2.83999;

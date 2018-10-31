@@ -1136,7 +1136,7 @@ public class TablaResultados extends javax.swing.JFrame {
     */
     public void mostrarEstadisticasFinales() {
         
-        String message = "<html> <body> Contadores y sumarios:<br>";
+        String message = "<html> <body>Estadísticas y contadores sumarios:<br>";
         message += " 1) <u>Número de entradas efectuadas</u>: " + String.valueOf(contLlegadaClientes);
         message += (contLlegadaClientes == 1)? " entrada<br>":" entradas<br>";
         message += " 2) <u>Número de clientes atendidos</u>: " + String.valueOf(contServicioClientes);
@@ -1154,6 +1154,7 @@ public class TablaResultados extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, message, "Resultados de la corrida", JOptionPane.INFORMATION_MESSAGE);
         
     }
+    
     
     /*
         Métodos getter and setter del atributo estadisticasGeneradas
@@ -1211,15 +1212,16 @@ public class TablaResultados extends javax.swing.JFrame {
         Eventos = new javax.swing.JButton();
         PatronServicio = new javax.swing.JButton();
         volver = new javax.swing.JButton();
-        EstructuraModelo = new javax.swing.JButton();
         PLlegada = new javax.swing.JLabel();
         PServicio = new javax.swing.JLabel();
         PatronLlegada = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
         PatronesServicio = new javax.swing.JList();
+        EstructuraModelo = new javax.swing.JButton();
         jScrollPane5 = new javax.swing.JScrollPane();
         PatronesLlegada = new javax.swing.JList();
         jLabel1 = new javax.swing.JLabel();
+        EstadisticasFinales1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Resultados obtenidos");
@@ -1255,7 +1257,7 @@ public class TablaResultados extends javax.swing.JFrame {
 
             },
             new String [] {
-                "T.R.", "E.Q.", "N.E.", "<html> <body> R<sub>n</sub>", "E.G. ", "L.E."
+                "Tiempo del reloj", "Evento que ocurre", "Número de entidades", "<html> <body> R<sub>i</sub>", "Evento generado", "Lista de eventos"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -1278,22 +1280,22 @@ public class TablaResultados extends javax.swing.JFrame {
             TablaResultadosFinales.getColumnModel().getColumn(5).setPreferredWidth(200);
         }
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 760, 340));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 100, 830, 340));
 
         EstadisticasFinales.setBackground(new java.awt.Color(255, 255, 255));
-        EstadisticasFinales.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
+        EstadisticasFinales.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         EstadisticasFinales.setForeground(new java.awt.Color(102, 102, 102));
-        EstadisticasFinales.setText("<html> <body> Estadísticas finales </body> </html>");
+        EstadisticasFinales.setText("<html> <body> Estadísticas finales de la corrida</body> </html>");
         EstadisticasFinales.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         EstadisticasFinales.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EstadisticasFinalesActionPerformed(evt);
             }
         });
-        jPanel1.add(EstadisticasFinales, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 180, 50));
+        jPanel1.add(EstadisticasFinales, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 250, 40));
 
         Eventos.setBackground(new java.awt.Color(255, 255, 255));
-        Eventos.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
+        Eventos.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         Eventos.setForeground(new java.awt.Color(102, 102, 102));
         Eventos.setText("Eventos");
         Eventos.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -1302,10 +1304,10 @@ public class TablaResultados extends javax.swing.JFrame {
                 EventosActionPerformed(evt);
             }
         });
-        jPanel1.add(Eventos, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 180, 50));
+        jPanel1.add(Eventos, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 250, 30));
 
         PatronServicio.setBackground(new java.awt.Color(255, 255, 255));
-        PatronServicio.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
+        PatronServicio.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         PatronServicio.setForeground(new java.awt.Color(102, 102, 102));
         PatronServicio.setText("<html> <body> Patrón de servicio </body> </html>");
         PatronServicio.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -1314,7 +1316,7 @@ public class TablaResultados extends javax.swing.JFrame {
                 PatronServicioActionPerformed(evt);
             }
         });
-        jPanel1.add(PatronServicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 180, 50));
+        jPanel1.add(PatronServicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 250, 30));
 
         volver.setBackground(new java.awt.Color(26, 42, 84));
         volver.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
@@ -1328,30 +1330,18 @@ public class TablaResultados extends javax.swing.JFrame {
         });
         jPanel1.add(volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 620, 140, 30));
 
-        EstructuraModelo.setBackground(new java.awt.Color(255, 255, 255));
-        EstructuraModelo.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
-        EstructuraModelo.setForeground(new java.awt.Color(102, 102, 102));
-        EstructuraModelo.setText("<html> <body> Estructura<br>del modelo </body> </html>");
-        EstructuraModelo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        EstructuraModelo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EstructuraModeloActionPerformed(evt);
-            }
-        });
-        jPanel1.add(EstructuraModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 180, 50));
-
         PLlegada.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
         PLlegada.setForeground(new java.awt.Color(102, 102, 102));
         PLlegada.setText("Patrón de llegada");
-        jPanel1.add(PLlegada, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 450, 150, 30));
+        jPanel1.add(PLlegada, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 450, 150, 30));
 
         PServicio.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
         PServicio.setForeground(new java.awt.Color(102, 102, 102));
         PServicio.setText("Patrón de servicio");
-        jPanel1.add(PServicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 450, 150, 30));
+        jPanel1.add(PServicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 450, 150, 30));
 
         PatronLlegada.setBackground(new java.awt.Color(255, 255, 255));
-        PatronLlegada.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
+        PatronLlegada.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         PatronLlegada.setForeground(new java.awt.Color(102, 102, 102));
         PatronLlegada.setText("<html> <body> Patrón de llegada </body> </html>");
         PatronLlegada.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -1360,22 +1350,46 @@ public class TablaResultados extends javax.swing.JFrame {
                 PatronLlegadaActionPerformed(evt);
             }
         });
-        jPanel1.add(PatronLlegada, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, 180, 50));
+        jPanel1.add(PatronLlegada, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 250, 30));
 
         PatronesServicio.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         PatronesServicio.setSelectionBackground(new java.awt.Color(50, 72, 135));
         jScrollPane4.setViewportView(PatronesServicio);
 
-        jPanel1.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 480, 360, 170));
+        jPanel1.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 480, 360, 170));
+
+        EstructuraModelo.setBackground(new java.awt.Color(255, 255, 255));
+        EstructuraModelo.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
+        EstructuraModelo.setForeground(new java.awt.Color(102, 102, 102));
+        EstructuraModelo.setText("<html> <body> Estructura del modelo </body> </html>");
+        EstructuraModelo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        EstructuraModelo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EstructuraModeloActionPerformed(evt);
+            }
+        });
+        jPanel1.add(EstructuraModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 0, 0));
 
         PatronesLlegada.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         PatronesLlegada.setSelectionBackground(new java.awt.Color(50, 72, 135));
         jScrollPane5.setViewportView(PatronesLlegada);
 
-        jPanel1.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 480, 380, 170));
+        jPanel1.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 480, 380, 170));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/icons/iconos/logopeqcorp2.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
+
+        EstadisticasFinales1.setBackground(new java.awt.Color(255, 255, 255));
+        EstadisticasFinales1.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
+        EstadisticasFinales1.setForeground(new java.awt.Color(102, 102, 102));
+        EstadisticasFinales1.setText("<html> <body> Estadísticas finales de la simulación</body> </html>");
+        EstadisticasFinales1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        EstadisticasFinales1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EstadisticasFinales1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(EstadisticasFinales1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 250, 40));
 
         getContentPane().add(jPanel1);
 
@@ -1468,6 +1482,10 @@ public class TablaResultados extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, formatoFormula, "Patrón de llegada", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_PatronLlegadaActionPerformed
 
+    private void EstadisticasFinales1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EstadisticasFinales1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EstadisticasFinales1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1525,6 +1543,7 @@ public class TablaResultados extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static javax.swing.JButton EstadisticasFinales;
+    public static javax.swing.JButton EstadisticasFinales1;
     public static javax.swing.JButton EstructuraModelo;
     public static javax.swing.JButton Eventos;
     private static javax.swing.JLabel PLlegada;
