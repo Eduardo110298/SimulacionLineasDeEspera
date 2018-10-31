@@ -72,8 +72,8 @@ public class FormularioEntrada extends javax.swing.JFrame {
         TPL.setVisible(false);
         TPS.setVisible(false);
         eventos();
-        setIconImage(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("org/icons/iconos/clock.png")));
-        getContentPane().setBackground(new Color(204, 255, 255));
+        //setIconImage(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("org/icons/iconos/clock.png")));
+        getContentPane().setBackground(new Color(209,233,239));
         setLocationRelativeTo(null);
     }
 

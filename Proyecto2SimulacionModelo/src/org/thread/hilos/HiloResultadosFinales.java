@@ -5,7 +5,7 @@
  */
 package org.thread.hilos;
 
-import org.system.medidor.progreso.BarraProgreso;
+//import org.system.medidor.progreso.BarraProgreso;
 import org.system.resultados.TablaResultados;
 import javax.swing.BorderFactory;
 import javax.swing.border.Border;
@@ -17,7 +17,7 @@ public class HiloResultadosFinales extends Thread {
     
     //Atributos de la clase
     protected TablaResultados ResultadosFinales = null;
-    protected BarraProgreso barra = null;
+    //protected BarraProgreso barra = null;
     protected final int millis = 0;
     protected final int finalMillis = 1000;
     
@@ -26,7 +26,7 @@ public class HiloResultadosFinales extends Thread {
     */
     public HiloResultadosFinales(TablaResultados ResultadosFinales) {
         this.ResultadosFinales = ResultadosFinales;
-        this.barra = new BarraProgreso("Simulando...");
+    //    this.barra = new BarraProgreso("Simulando...");
     }
     
     /*
@@ -55,32 +55,32 @@ public class HiloResultadosFinales extends Thread {
     */
     @Override
     public void run() {
-        barra.frame.pack();
-        barra.frame.setLocationRelativeTo(null);
-        barra.frame.setVisible(true);
+      //  barra.frame.pack();
+        //barra.frame.setLocationRelativeTo(null);
+        //barra.frame.setVisible(true);
         SystemPause.pause(millis);
         ResultadosFinales.condicionesIniciales();
-        barra.increment(5);
+        //barra.increment(5);
         SystemPause.pause(millis);
         ResultadosFinales.calcularResultados();
-        barra.increment(25);
+        //barra.increment(25);
         SystemPause.pause(millis);
         ResultadosFinales.mostrarTablaResultados();
-        barra.increment(20);
+        //barra.increment(20);
         SystemPause.pause(millis);
         ResultadosFinales.mostrarPatronLlegada();
-        barra.increment(20);
+        //barra.increment(20);
         SystemPause.pause(millis);
         ResultadosFinales.mostrarPatronServicio();
-        barra.increment(20);
+        //barra.increment(20);
         SystemPause.pause(millis);
         boolean numerosRnRepetidos = ResultadosFinales.numerosPseudoaleatoriosRepetidos();
-        barra.increment(10);
+        //barra.increment(10);
         Border border = BorderFactory.createTitledBorder("Simulación completada");
-        barra.current.setBorder(border);
+        //barra.current.setBorder(border);
         ResultadosFinales.refrescarComponentesInterfaz();
         SystemPause.pause(finalMillis);
-        barra.frame.setVisible(false);
+        //barra.frame.setVisible(false);
         if (numerosRnRepetidos) {
             ResultadosFinales.mostrarMensajeAdvertencia("ADVERTENCIA", "Se generaron números pseudoaleatorios repetidos");
         }

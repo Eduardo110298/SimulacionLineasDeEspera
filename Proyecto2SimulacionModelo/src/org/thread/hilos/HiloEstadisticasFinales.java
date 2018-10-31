@@ -5,7 +5,7 @@
  */
 package org.thread.hilos;
 
-import org.system.medidor.progreso.BarraProgreso;
+//import org.system.medidor.progreso.BarraProgreso;
 import org.system.resultados.TablaResultados;
 import javax.swing.BorderFactory;
 import javax.swing.border.Border;
@@ -17,7 +17,7 @@ public class HiloEstadisticasFinales extends Thread {
     
     //Atributos de la clase
     protected TablaResultados ResultadosFinales = null;
-    protected BarraProgreso barra = null;
+    //protected BarraProgreso barra = null;
     protected final int millis = 0;
     protected final int finalMillis = 1000;
     
@@ -26,7 +26,7 @@ public class HiloEstadisticasFinales extends Thread {
     */
     public HiloEstadisticasFinales(TablaResultados ResultadosFinales) {
         this.ResultadosFinales = ResultadosFinales;
-        this.barra = new BarraProgreso("Generando estadísticas...");
+        //this.barra = new BarraProgreso("Generando estadísticas...");
     }
     
     /*
@@ -57,37 +57,37 @@ public class HiloEstadisticasFinales extends Thread {
     */
     @Override
     public void run() {
-        barra.frame.pack();
-        barra.frame.setLocationRelativeTo(null);
-        barra.frame.setVisible(true);
+        //barra.frame.pack();
+        //barra.frame.setLocationRelativeTo(null);
+        //barra.frame.setVisible(true);
         SystemPause.pause(millis);
         ResultadosFinales.generarNEMaximo();
-        barra.increment(10);
+        //barra.increment(10);
         SystemPause.pause(millis);
         ResultadosFinales.generarTiempoPromedioLlegada();
-        barra.increment(15);
+        //barra.increment(15);
         SystemPause.pause(millis);
         ResultadosFinales.generarTiempoPromedioServicio();
-        barra.increment(15);
+        //barra.increment(15);
         SystemPause.pause(millis);
         ResultadosFinales.generarTiempoOcioServidor();
-        barra.increment(10);
+        //barra.increment(10);
         SystemPause.pause(millis);
         ResultadosFinales.generarTiempoTotal();
-        barra.increment(5);
+        //barra.increment(5);
         SystemPause.pause(millis);
         ResultadosFinales.generarTiempoUtilizacionServidor();
-        barra.increment(5);
+        //barra.increment(5);
         SystemPause.pause(millis);
         ResultadosFinales.generarTiempoPromedioEsperaCola();
-        barra.increment(20);
+        //barra.increment(20);
         SystemPause.pause(millis);
         ResultadosFinales.generarTiempoPromedioEsperaSistema();
-        barra.increment(20);
+        //barra.increment(20);
         Border border = BorderFactory.createTitledBorder("Estadísticas generadas");
-        barra.current.setBorder(border);
+        //barra.current.setBorder(border);
         SystemPause.pause(finalMillis);
-        barra.frame.setVisible(false);
+        //barra.frame.setVisible(false);
         ResultadosFinales.setEstadisticasGeneradas(true);
         ResultadosFinales.mostrarEstadisticasFinales();
     }

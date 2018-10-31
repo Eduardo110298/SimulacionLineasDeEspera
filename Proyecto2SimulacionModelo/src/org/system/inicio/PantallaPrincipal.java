@@ -51,8 +51,8 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     public PantallaPrincipal() {
         initComponents();
         constructor();
-        setIconImage(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("org/icons/iconos/clock.png")));
-        getContentPane().setBackground(new Color(204, 255, 255));
+        //setIconImage(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("org/icons/iconos/clock.png")));
+        getContentPane().setBackground(new Color(209,233,239));
         setLocationRelativeTo(null);
     }
 
@@ -198,7 +198,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         continuar.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
         continuar.setForeground(new java.awt.Color(255, 255, 255));
         continuar.setText("Iniciar");
-        continuar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        continuar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         continuar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 continuarActionPerformed(evt);

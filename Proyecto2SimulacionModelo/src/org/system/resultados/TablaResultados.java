@@ -1187,8 +1187,8 @@ public class TablaResultados extends javax.swing.JFrame {
         rnd = new Rand();
         systemTimer = null;
         NE = FormularioEntrada.NroEntidades;
-        setIconImage(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("org/icons/iconos/clock.png")));
-        getContentPane().setBackground(new Color(204, 255, 255));
+        //setIconImage(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("org/icons/iconos/clock.png")));
+        getContentPane().setBackground(new Color(209,233,239));
         setLocationRelativeTo(null);
     }
 
@@ -1284,7 +1284,7 @@ public class TablaResultados extends javax.swing.JFrame {
         EstadisticasFinales.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
         EstadisticasFinales.setForeground(new java.awt.Color(102, 102, 102));
         EstadisticasFinales.setText("<html> <body> Estadísticas finales </body> </html>");
-        EstadisticasFinales.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        EstadisticasFinales.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         EstadisticasFinales.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EstadisticasFinalesActionPerformed(evt);
@@ -1296,7 +1296,7 @@ public class TablaResultados extends javax.swing.JFrame {
         Eventos.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
         Eventos.setForeground(new java.awt.Color(102, 102, 102));
         Eventos.setText("Eventos");
-        Eventos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Eventos.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Eventos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EventosActionPerformed(evt);
@@ -1308,7 +1308,7 @@ public class TablaResultados extends javax.swing.JFrame {
         PatronServicio.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
         PatronServicio.setForeground(new java.awt.Color(102, 102, 102));
         PatronServicio.setText("<html> <body> Patrón de servicio </body> </html>");
-        PatronServicio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        PatronServicio.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         PatronServicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PatronServicioActionPerformed(evt);
@@ -1320,7 +1320,7 @@ public class TablaResultados extends javax.swing.JFrame {
         volver.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
         volver.setForeground(new java.awt.Color(255, 255, 255));
         volver.setText("Volver");
-        volver.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        volver.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         volver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 volverActionPerformed(evt);
@@ -1332,7 +1332,7 @@ public class TablaResultados extends javax.swing.JFrame {
         EstructuraModelo.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
         EstructuraModelo.setForeground(new java.awt.Color(102, 102, 102));
         EstructuraModelo.setText("<html> <body> Estructura<br>del modelo </body> </html>");
-        EstructuraModelo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        EstructuraModelo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         EstructuraModelo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EstructuraModeloActionPerformed(evt);
@@ -1354,7 +1354,7 @@ public class TablaResultados extends javax.swing.JFrame {
         PatronLlegada.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
         PatronLlegada.setForeground(new java.awt.Color(102, 102, 102));
         PatronLlegada.setText("<html> <body> Patrón de llegada </body> </html>");
-        PatronLlegada.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        PatronLlegada.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         PatronLlegada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PatronLlegadaActionPerformed(evt);
