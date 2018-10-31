@@ -3,8 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/inesita/SimulacionLineasDeEspera/Proyecto2SimulacionModelo/src/org/system/inicio/PantallaPrincipal.java</file>
-            <file>file:/C:/Users/inesita/SimulacionLineasDeEspera/Proyecto2SimulacionModelo/src/org/system/inicio/FormularioEntrada.java</file>
+            <file>file:/C:/Users/aels21/SimulacionLineasDeEspera/Proyecto2SimulacionModelo/src/org/system/resultados/TablaResultados.java</file>
+            <file>file:/C:/Users/aels21/SimulacionLineasDeEspera/Proyecto2SimulacionModelo/src/org/thread/hilos/HiloResultadosFinales.java</file>
+            <file>file:/C:/Users/aels21/SimulacionLineasDeEspera/Proyecto2SimulacionModelo/src/org/system/patrones/Formulas.java</file>
+            <file>file:/C:/Users/aels21/SimulacionLineasDeEspera/Proyecto2SimulacionModelo/src/org/system/inicio/FormularioEntrada.java</file>
+            <file>file:/C:/Users/aels21/SimulacionLineasDeEspera/Proyecto2SimulacionModelo/src/org/system/constants/constantes/ConstantesGlobales.java</file>
+            <file>file:/C:/Users/aels21/SimulacionLineasDeEspera/Proyecto2SimulacionModelo/src/org/system/inicio/PantallaPrincipal.java</file>
         </group>
     </open-files>
 </project-private>

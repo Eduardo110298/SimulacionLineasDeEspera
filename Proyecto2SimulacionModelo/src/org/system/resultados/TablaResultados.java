@@ -20,13 +20,14 @@ import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import org.timer.temporizador.SystemTimer;
-
+import org.system.inicio.PantallaPrincipal;
 /*
  Interfaz donde se generan los resultados y las estadísticas finales
  */
 public class TablaResultados extends javax.swing.JFrame {
 
     //Atributos de la clase
+    boolean bandera =true ;
     protected Rand rnd = null;
     protected ArrayList<ArrayList<String>> resultadosTabla = new ArrayList<>();
     protected ArrayList<Double> patronLlegadaClientes = new ArrayList<>();
@@ -1483,7 +1484,21 @@ public class TablaResultados extends javax.swing.JFrame {
     }//GEN-LAST:event_PatronLlegadaActionPerformed
 
     private void EstadisticasFinales1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EstadisticasFinales1ActionPerformed
-        // TODO add your handling code here:
+        if (bandera) {
+            PantallaPrincipal.tiempoPromedioLlegadaSIMULACION+=tiempoPromedioLlegada;
+            PantallaPrincipal.tiempoPromedioServicioSIMULACION+=tiempoPromedioServicio;
+            PantallaPrincipal.tiempoPromedioEsperaColaSIMULACION+=tiempoPromedioEsperaCola;
+            PantallaPrincipal.tiempoPromedioEsperaSistemaSIMULACION+=tiempoPromedioEsperaSistema;
+        }
+        bandera=false;
+        String message = "<html> <body>Estadísticas y contadores sumarios de la Simulacion:<br>";
+        message += " 1) <u>Tiempo promedio entre llegadas</u>: " + formatoDecimal((PantallaPrincipal.tiempoPromedioLlegadaSIMULACION)/PantallaPrincipal.cantidadDeCorridas) + " m <br>";
+        message += " 2) <u>Tiempo promedio de servicio</u>: " + formatoDecimal((PantallaPrincipal.tiempoPromedioServicioSIMULACION)/PantallaPrincipal.cantidadDeCorridas) + " m <br>";
+        message += " 3) <u>Tiempo promedio de espera en cola</u>: " + formatoDecimal((PantallaPrincipal.tiempoPromedioEsperaColaSIMULACION)/PantallaPrincipal.cantidadDeCorridas) + " m <br>";
+        message += " 4) <u>Tiempo promedio de espera en el Sistema</u>: " + formatoDecimal((PantallaPrincipal.tiempoPromedioEsperaSistemaSIMULACION)/PantallaPrincipal.cantidadDeCorridas) + " m";
+        message += "</html> </body>";
+        
+        JOptionPane.showMessageDialog(this, message, "Resultados de la corrida", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_EstadisticasFinales1ActionPerformed
 
     /**
@@ -1495,6 +1510,7 @@ public class TablaResultados extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
+        
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -1514,6 +1530,7 @@ public class TablaResultados extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
+        
         java.awt.EventQueue.invokeLater(() -> {
             TablaResultados ResultadosFinales = new TablaResultados();
             ResultadosFinales.setVisible(true);
@@ -1522,7 +1539,9 @@ public class TablaResultados extends javax.swing.JFrame {
             }
             ResultadosFinales.setSystemTimer(new SystemTimer());
             ResultadosFinales.getSystemTimer().createTimerFormat12Hour(ResultadosFinales, "fecha", "hora");
+        
         });
+        
     }
     
     /*

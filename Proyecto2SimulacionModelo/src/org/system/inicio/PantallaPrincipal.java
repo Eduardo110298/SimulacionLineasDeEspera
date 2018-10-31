@@ -22,13 +22,13 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     
     //Atributo de la clase
     private SystemTimer systemTimer = null;
-    public static final int cantidadDeCorridas = 0;
-    public static final double tiempoPromedioLlegadaSIMULACION = 0;
-    public static final double tiempoPromedioServicioSIMULACION = 0;
-    public static final double tiempoOcioServidorSIMULACION = 0;
-    public static final double tiempoUtilizacionServidorSIMULACION = 0;
-    public static final double tiempoPromedioEsperaColaSIMULACION = 0;
-    public static final double tiempoPromedioEsperaSistemaSIMULACION = 0;
+    public static int cantidadDeCorridas = 0;
+    public static double tiempoPromedioLlegadaSIMULACION = 0;
+    public static double tiempoPromedioServicioSIMULACION = 0;
+    public static double tiempoOcioServidorSIMULACION = 0;
+    public static double tiempoUtilizacionServidorSIMULACION = 0;
+    public static double tiempoPromedioEsperaColaSIMULACION = 0;
+    public static double tiempoPromedioEsperaSistemaSIMULACION = 0;
     /*
      Método constructor de la clase
      */

@@ -412,6 +412,7 @@ public class FormularioEntrada extends javax.swing.JFrame {
     }//GEN-LAST:event_CondicionParadaKeyTyped
 
     private void aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarActionPerformed
+        PantallaPrincipal.cantidadDeCorridas++;
         int index = (int)TipoParada.getSelectedIndex();
         if (index!=0 && Integer.parseInt(CondicionParada.getText())==0) {
             String message=index==1?"El número de clientes que llegan al Sistema debe ser mayor a 0":"El número de entidades servidas debe ser mayor a 0";
